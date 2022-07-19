@@ -1,0 +1,70 @@
+<body>
+<mat-card>
+
+<mat-card id="header">
+   <h1>Costco Wholesale</h1>
+   <button mat-icon-button color="link" aria-label="Example icon button with a home icon" id="home">
+    <a href="/"><mat-icon>home</mat-icon></a>
+  </button>
+
+</mat-card>
+
+
+<br><br>
+
+
+<mat-card id="services">
+  <h1>Services</h1>
+    <mat-checkbox
+        *ngFor="let s of services"
+    >
+    {{ s }}
+
+
+
+</mat-checkbox>
+<button mat-raised-button color="primary">Add Services</button>
+</mat-card>
+
+   <mat-card class="demo-inline-calendar-card">
+
+    <mat-calendar [(selected)]="selected">
+
+    </mat-calendar>
+
+
+<mat-card id="avaiableTimes">
+
+
+    <h2>Available Times</h2>
+
+
+          <button mat-raised-button color="primary" id="time">9:00 am </button>
+
+
+
+          <button mat-raised-button color="primary" id="time2">10:00 am </button>
+
+
+
+          <button mat-raised-button color="disabled" id="time3">11:00 am </button>
+
+
+
+          <button mat-raised-button color="primary" id="time4">1:00 pm </button>
+
+
+</mat-card>
+
+<br><br>
+
+
+
+
+
+<br><br>
+<a href="/confirmation"><button mat-raised-button color="primary">Submit</button></a>
+</mat-card>
+
+</mat-card>
+</body>

@@ -1,0 +1,51 @@
+div.form {
+    display: block;
+    text-align: center;
+
+}
+
+form {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+}
+
+.firstName, .lastName, .comments {
+    margin-right: 9em;
+}
+
+.phoneNumber, .vehicleMake {
+    margin-right: 8em;
+}
+
+.email {
+    margin-right: 12em;
+}
+
+.service {
+    margin-right: 11em;
+}
+
+#asterisk {
+    color: red;
+
+}
+
+.memberNumber {
+  margin-right: 6em;
+}
+
+
+
+#header {
+  background-color: #eeeeee;
+  color: #cf0a2c;
+
+}
+
+#home {
+  text-align: right;
+}
+

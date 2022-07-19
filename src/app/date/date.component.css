@@ -1,0 +1,56 @@
+
+
+th {
+   padding: 3em;
+    background-color: #b9e9fa;
+    text-align: center;
+}
+
+
+
+#time, #time2, #time3, #time4 {
+  margin-left: 2em;
+  margin-bottom: .5em;
+}
+
+mat-card {
+
+    margin-bottom: 2em;
+
+}
+
+
+mat-checkbox {
+    display: block;
+}
+
+.demo-inline-calendar-card {
+  width: 300px;
+  margin: 3em;
+}
+
+#pickTime {
+  margin-left: 900px;
+}
+
+#times {
+  display: block;
+  margin-left: 55em;
+
+}
+
+#availableTimes {
+  display: inline-block
+}
+
+
+#header {
+  background-color: #eeeeee;
+  color: #cf0a2c;
+
+}
+
+#services {
+  text-align: center;
+}
+
