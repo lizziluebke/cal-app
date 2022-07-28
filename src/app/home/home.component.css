@@ -9,3 +9,8 @@ body {
   text-align: left;
   color: #cf0a2c;
 }
+
+mat-list-item {
+  margin: auto;
+  display: flex;
+}

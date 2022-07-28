@@ -19,6 +19,10 @@ import { ClientInfoComponent } from './client-info/client-info.component';
 import { TimesComponent } from './times/times.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { getAppointmentService } from './services/getAppointments.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -53,11 +57,13 @@ const routes: Routes = [
     MatSelectModule,
     MatCheckboxModule,
     MatIconModule,
-
+    MatDividerModule,
+    MatListModule,
+    HttpClientModule
 
 
   ],
-  providers: [],
+  providers: [getAppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { getAppointmentService } from '../services/getAppointments.service';
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
 
 @Component({
@@ -9,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
   services: string[] = ['Tire install', ' Tire rotation', 'Battery replacement'];
   selected: any;
+  getAppointmentService: any;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getAppointmentService.getAppointments()
+    console.log("appointment");
   }
 
 
