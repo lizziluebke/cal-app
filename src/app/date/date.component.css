@@ -1,47 +1,37 @@
-
-
-th {
-   padding: 3em;
-    background-color: #b9e9fa;
-    text-align: center;
-}
-
-
-
-#time, #time2, #time3, #time4 {
-  margin-left: 2em;
-  margin-bottom: .5em;
-}
-
-mat-card {
-
-    margin-bottom: 2em;
-
+body {
+  background-color: #eff7fb;
+  text-align: center;
 }
 
 
 mat-checkbox {
     display: block;
-}
-
-.demo-inline-calendar-card {
-  width: 300px;
-  margin: 3em;
-}
-
-#pickTime {
-  margin-left: 900px;
-}
-
-#times {
-  display: block;
-  margin-left: 55em;
+    font-size: 25px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 40px;
 
 }
 
-#availableTimes {
-  display: inline-block
-}
+
+/* .demo-inline-calendar-card {
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 25em;
+} */
+
+
+
+
+
+/* .datePicker {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+
+} */
+
 
 
 #header {
@@ -50,7 +40,83 @@ mat-checkbox {
 
 }
 
-#services {
+/* #services {
   text-align: center;
+} */
+
+#toolbar {
+  color: blue;
+  text-color: white;
 }
 
+#home {
+  margin-left: 50em;
+  background-color: white;
+}
+
+h1 {
+  color: #e31836;
+
+
+}
+
+/* .demo-inline-calendar-card {
+  margin-left: 50em;
+}
+
+.serviceCheckbox {
+  margin-left: 30em;
+
+} */
+
+/* .flex-wrapper {
+  display: flex;
+  max-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+} */
+
+
+
+/* .addServices {
+  margin-left: 30em;
+} */
+
+/* .submit {
+  /* margin-top: 50em;
+  margin-right: 30em; */
+
+
+
+
+
+
+/* div {
+  display: inline-block;
+} */
+
+/* .cal {
+  margin-left: 20em;
+  margin-bottom: 40em;
+
+  height: 350px;
+  width: 300px;
+  padding-bottom: 20em;
+  padding-right: 30em;
+  text-align: center;
+  justify-content: center;
+} */
+
+.services, .serviceHeading {
+
+  text-align: right;
+  margin-right: 40px;
+
+
+}
+
+.calendar {
+  width: 400px;
+  background-color: white;
+}

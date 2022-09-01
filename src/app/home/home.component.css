@@ -1,7 +1,6 @@
 body {
     text-align: center;
-
-
+    background-color: #eff7fb;
 }
 
 #header {
@@ -14,3 +13,26 @@ mat-list-item {
   margin: auto;
   display: flex;
 }
+
+#toolbar {
+  color: black;
+  text-color: white;
+}
+
+#home {
+  margin-left: 100em;
+  background-color: white;
+}
+
+h1 {
+  color: white;
+}
+
+/* .container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  justify-content: center;
+} */

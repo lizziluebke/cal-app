@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { getAppointmentService } from './services/getAppointments.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cal-app';
+  private times: any = [];
+
+
+  constructor(private http: HttpClient, private AppointmentService : getAppointmentService) {
+
+  }
+  ngOnInit() {
+
+  }
 
 }

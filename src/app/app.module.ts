@@ -23,6 +23,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { getAppointmentService } from './services/getAppointments.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 
 const routes: Routes = [
@@ -59,7 +64,12 @@ const routes: Routes = [
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule
+
+
 
 
   ],

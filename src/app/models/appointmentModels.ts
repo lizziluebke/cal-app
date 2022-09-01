@@ -16,6 +16,6 @@ export interface getAppointmentResponse{
   facilityId: string
   startDate: string
   endDate: string
-  appointmentSlots: Date
+  appointmentSlots: any
 
 }

@@ -1,33 +1,79 @@
+// this is the real one !!!!!
+
+
 import { Component, OnInit } from '@angular/core';
 import { getAppointmentService } from '../services/getAppointments.service';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatButton } from '@angular/material/button';
+
 
 
 @Component({
   selector: 'app-date',
   templateUrl: './date.component.html',
-  styleUrls: ['./date.component.css']
+  styleUrls: ['./date.component.css'],
+
 })
 export class DateComponent implements OnInit {
-  services: string[] = ['Tire install', ' Tire rotation', 'Battery replacement'];
+  services: string[] = ['Tire Install', ' Tire Rotation', 'Battery Replacement'];
   selected: any;
   getAppointmentService: any;
-  constructor() { }
+  times: any = [];
+
+
+  constructor(private http: HttpClient, private appointmentService : getAppointmentService) { }
 
   ngOnInit() {
-    this.getAppointmentService.getAppointments()
-    console.log("appointment");
+   //this.getAppointmentService.getAppointments();
+   // this.appointmentService.getAppointments(20220826, "1", "30");
+
   }
 
+  selectedDate: any;
 
-  DateSelected : any;
 
-  fetchDateSelected(){
-    console.log("date selected by user  ..." + this.DateSelected())
+   dateConverter (date: string) {
+    let dateSTR = JSON.stringify(date);
+    return dateSTR;
   }
+
+   async dateChecker (date: string) {
+      const formattedDate = this.dateConverter(date);
+      let formattedSTR =  JSON.stringify(date);
+      let formattedJSON = JSON.parse(formattedSTR);
+      let search = '-';
+      let replace = '';
+      let res = formattedSTR.split(search).join(replace);
+      console.log(res.substring(1,9));
+      let dateResult = res.substring(1,9);
+      let finalResult = this.appointmentService.getAppointments(dateResult, "1", "30");
+
+      finalResult.forEach((xyz) => {
+       console.log(xyz.appointmentSlots);
+
+
+
+
+
+
+
+
+      });
+
+      ;
+
+
+        return finalResult;
+}
 
 
 }
+
+
+
+
+
 
 
