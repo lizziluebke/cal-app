@@ -9,7 +9,9 @@ import { getAppointmentService } from '../services/getAppointments.service';
 })
 export class ConfirmationComponent implements OnInit {
 
-  constructor(private http: HttpClient, private appointmentService: getAppointmentService) { }
+  services: string[] = ['Tire Install', ' Tire Rotation', 'Battery Replacement'];
+
+  constructor(private http: HttpClient, public appointmentService: getAppointmentService) { }
 
   ngOnInit(): void {
 

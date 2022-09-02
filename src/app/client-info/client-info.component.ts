@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-client-info',
@@ -8,10 +8,13 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class ClientInfoComponent implements OnInit {
 selected: any;
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
+
+
 
 }

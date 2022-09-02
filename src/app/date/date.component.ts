@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatButton } from '@angular/material/button';
+import { NgForm } from '@angular/forms';
 
 
 
@@ -25,13 +26,20 @@ export class DateComponent implements OnInit {
 
   constructor(private http: HttpClient, private appointmentService : getAppointmentService) { }
 
+
+
   ngOnInit() {
-   //this.getAppointmentService.getAppointments();
-   // this.appointmentService.getAppointments(20220826, "1", "30");
+
 
   }
 
+
+
   selectedDate: any;
+
+  showDate(datePicker: NgForm) {
+    console.log(datePicker.value);
+  }
 
 
    dateConverter (date: string) {

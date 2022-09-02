@@ -46,7 +46,8 @@ const routes: Routes = [
     HomeComponent,
     ClientInfoComponent,
     TimesComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+
   ],
   imports: [
     BrowserModule,
