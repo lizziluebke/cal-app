@@ -55,18 +55,22 @@
       <br><br><br>
 
 
-      <div
-          *ngFor="let t of times"
-      >
-      <h3>
-          {{ t.appointmentSlots }}
-      </h3>
-
-
-      </div>
-
       <h1>Available times for {{ selected }} </h1>
       <br><br>
+
+
+      <div
+         *ngFor="let o of openings">
+    <button
+        (click)="dateChecker(selected)"
+    >
+        {{ o }}
+    </button>
+  </div>
+
+
+
+
 
       <br><br><br><br><br>
       <a href="/clientInfo"><button mat-raised-button color="primary" class="submit">Submit</button></a>
@@ -74,3 +78,11 @@
       <!-- </div> -->
       </body>
 
+      <br><br>
+      <footer>
+        <p>&copy; Lizzi Luebke 2022</p>
+        <address>
+          Email:
+          <a href="mailto:eluebke@costco.com"> Lizzi Luebke</a>
+        </address>
+      </footer>

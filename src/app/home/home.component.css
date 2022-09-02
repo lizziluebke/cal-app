@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    background-color: #eff7fb;
+    background-color: white;
+    height: 75vh;
 }
 
 #header {
@@ -36,3 +37,14 @@ h1 {
   transform: translateY(-50%);
   justify-content: center;
 } */
+
+footer {
+  background-color: #eee;
+  height: 15vh;
+  text-align: center;
+  font-size: x-large;
+}
+
+p {
+  padding: 2em;
+}

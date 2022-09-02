@@ -7,7 +7,7 @@ form {
     text-align: center;
     padding: 3em;
 
-    border: 2px solid black;
+
 
 }
 
@@ -51,3 +51,18 @@ form {
 }
 
 
+footer {
+  background-color: #eee;
+  height: 15vh;
+  text-align: center;
+  font-size: x-large;
+}
+
+p {
+  padding: 2em;
+}
+
+.next {
+  text-align: center;
+  margin-left: 58em;
+}

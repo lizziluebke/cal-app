@@ -1,5 +1,5 @@
 body {
-  background-color: #eff7fb;
+  background-color: white;
   text-align: center;
 }
 
@@ -118,8 +118,19 @@ h1 {
 
 .calendar {
   width: 400px;
-  background-color: white;
+  background-color: #eee;
 
   margin-left: 60px;
   margin-top: 80px;
+}
+
+footer {
+  background-color: #eee;
+  height: 15vh;
+  text-align: center;
+  font-size: x-large;
+}
+
+p {
+  padding: 2em;
 }

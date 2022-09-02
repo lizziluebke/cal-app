@@ -21,7 +21,7 @@ export class DateComponent implements OnInit {
   services: string[] = ['Tire Install', ' Tire Rotation', 'Battery Replacement'];
   selected: any;
   getAppointmentService: any;
-  times: any = [];
+  openings: string[] = [];
 
 
   constructor(private http: HttpClient, private appointmentService : getAppointmentService) { }
@@ -57,22 +57,23 @@ export class DateComponent implements OnInit {
       console.log(res.substring(1,9));
       let dateResult = res.substring(1,9);
       let finalResult = this.appointmentService.getAppointments(dateResult, "1", "30");
-
       finalResult.forEach((xyz) => {
-       console.log(xyz.appointmentSlots);
+        // let openings =  xyz.appointmentSlots[dateResult] // dateResult is a string
+        // forEach(openings)
+        // button
+          //console.log(xyz.appointmentSlots[dateResult][40].startTimestamp);
+          let openings = xyz.appointmentSlots[dateResult];
+          let openingCount = openings.length;
+          console.log(openingCount.toString().substring(1,9));
+          console.log(openings.toString().substring(1,9));  // this is what I want to print!!
 
+              for ( let i = 0; i < openingCount; i++) {
+               // if (openings[i].appointmentSlots > 0) // then show button, if 0 then skip
+                  this.openings[i] = openings[i].startTimestamp;
 
-
-
-
-
-
-
+                  console.log(openings[i].startTimestamp);
+              }
       });
-
-      ;
-
-
         return finalResult;
 }
 

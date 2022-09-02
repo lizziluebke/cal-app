@@ -16,6 +16,15 @@ export interface getAppointmentResponse{
   facilityId: string
   startDate: string
   endDate: string
-  appointmentSlots: any
+  appointmentSlots: appointmentSlots;
 
+}
+
+export interface appointmentSlots {
+  [day: string]: openDay[];
+}
+
+export interface openDay {
+  numOpenSlots: number;
+  startTimestamp: string;
 }

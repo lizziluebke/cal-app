@@ -20,3 +20,14 @@
 h1 {
   color: white;
 }
+
+footer {
+  background-color: #eee;
+  height: 15vh;
+  text-align: center;
+  font-size: x-large;
+}
+
+p {
+  padding: 2em;
+}
