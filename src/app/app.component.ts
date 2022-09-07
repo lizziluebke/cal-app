@@ -9,7 +9,7 @@ import { getAppointmentService } from './services/getAppointments.service';
 })
 export class AppComponent {
   title = 'cal-app';
-  private times: any = [];
+
 
 
   constructor(private http: HttpClient, private AppointmentService : getAppointmentService) {

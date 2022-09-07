@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 
 
 
+
 @Component({
   selector: 'app-date',
   templateUrl: './date.component.html',
@@ -22,8 +23,10 @@ export class DateComponent implements OnInit {
   selected: any;
   getAppointmentService: any;
   openings: string[] = [];
-  timeSlot: any[] = [];
-  text: string[] = [];
+  timeSlot: any;
+
+
+
 
 
 
@@ -31,10 +34,14 @@ export class DateComponent implements OnInit {
 
 
 
-  ngOnInit() {
 
+
+
+  ngOnInit(): void {
 
   }
+
+
 
 
 
