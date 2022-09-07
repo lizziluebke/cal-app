@@ -3,6 +3,7 @@
 <!-- <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head> -->
+<div class="flex-wrapper">
 
   <body>
     <!-- <div class="services"  >
@@ -45,6 +46,7 @@
             *ngFor="let s of services"
         >
             {{ s }}
+
             <br>
 
           </mat-checkbox>
@@ -59,14 +61,45 @@
       <br><br>
 
 
-      <div
+      <div class="container">
+      <div id="timeButtons"
+
+
          *ngFor="let o of openings">
-    <button
-        (click)="dateChecker(selected)"
+
+
+
+    <button mat-raised-button color="white"
+
+
+        (click)="captureTimeValue($event)"
+
     >
-        {{ o }}
+
+         {{ o }}
+
+
+
+
     </button>
+
+
   </div>
+
+</div>
+
+  <h1>hello {{ timeSlot }} goodbye</h1>
+  <p>{{ timeSlot }}</p>
+
+
+    <!-- <div
+      *ngFor="let t of timeSlot">
+    <h1>
+
+  </h1>
+    </div> -->
+
+
 
 
 
@@ -77,6 +110,7 @@
 
       <!-- </div> -->
       </body>
+      <div class="footer">
 
       <br><br>
       <footer>
@@ -86,3 +120,5 @@
           <a href="mailto:eluebke@costco.com"> Lizzi Luebke</a>
         </address>
       </footer>
+    </div>
+    </div>

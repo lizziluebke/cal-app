@@ -1,6 +1,7 @@
 body {
   background-color: white;
   text-align: center;
+
 }
 
 
@@ -134,3 +135,36 @@ footer {
 p {
   padding: 2em;
 }
+
+button {
+  margin: 2em;
+  background-color: blue;
+  border: solid black 3px;
+  color: white;
+
+  justify-content: center;
+
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  column-count: 4;
+}
+
+#timeButtons {
+  height: 50px;
+  column-width: 40px;
+
+
+}
+
