@@ -1,124 +1,113 @@
-
-
-<!-- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head> -->
 <div class="flex-wrapper">
-
-  <body>
-    <!-- <div class="services"  >
-
-
-
-
-        <h1 class="serviceHeading">Services</h1>
-        <mat-checkbox
-            *ngFor="let s of services"
-        >
-            {{ s }}
-            <br>
-
-          </mat-checkbox>
-          <br>
-        <button mat-raised-button color="primary" class="addServices">Add Services</button>
-
-
-    </div> -->
-
-
-    <br><br><br>
-
-
-      <mat-calendar class="calendar"
+    <body>
+        <br><br><br>
+        <mat-calendar class="calendar"
             [(selected)]="selected"
             (click)="dateChecker(selected)"
         >
-            {{ selected }}
-
-
-
-            <h1></h1>
+            <!-- {{ selected + "test" }} -->
         </mat-calendar>
 
-        <div class="services">
-        <h1 class="serviceHeading">Services</h1>
-        <mat-checkbox
-            *ngFor="let s of services"
-        >
-            {{ s }}
-
+        <!-- <div class="services">
+            <h1 class="serviceHeading">
+                  Services
+            </h1>
+            <mat-checkbox
+                *ngFor="let s of services"
+            >
+                {{ s }}
             <br>
+            </mat-checkbox> -->
 
-          </mat-checkbox>
+            <h1
+                class="serviceHeading"
+            >
+                Services
+            </h1>
+            <mat-radio-group
+                [(ngModel)]="service">
+              <mat-radio-button
+                  *ngFor="let ss of selectedService" [value]="ss"
+              >
+                {{ ss }}
+
+              </mat-radio-button>
+
+            </mat-radio-group>
+
+
           <br>
-        <button mat-raised-button color="primary" class="addServices">Add Services</button>
-      </div>
+            <button
+                mat-raised-button color="primary"
+                class="addServices">
+                    Add Services
+            </button>
+        <!-- </div> -->
+        <br><br><br>
 
-      <br><br><br>
+        <div
+            class="container"
+        >
+            <!-- <h1>
+                Available times for {{ selected }}
+            </h1> -->
+            <br><br>
 
+            <div id="timeButtons"
+                *ngFor="let o of openings"
+            >
 
-      <h1>Available times for {{ selected }} </h1>
-      <br><br>
-
-
-      <div class="container">
-      <div id="timeButtons"
-
-
-         *ngFor="let o of openings">
-
-
-
-    <button mat-raised-button color="white"
-
-
-        (click)="captureTimeValue($event)"
-
-    >
-
-         {{ o }}
+                <button
+                    mat-raised-button color="white"
+                    id="timeResults"
+                    (click)="captureTimeValue($event)"
 
 
+                >
+                    {{ o }}
+                </button>
+            </div>
+        </div>
 
+         <p
+             class="confirmationTime"
+         >
+             {{ this.timeSlot }}  {{ selected | date }}
+        </p>
 
-    </button>
-
-
-  </div>
-
-</div>
-
-  <h1>hello {{ timeSlot }} goodbye</h1>
-  <p>{{ timeSlot }}</p>
-
-
-    <!-- <div
-      *ngFor="let t of timeSlot">
-    <h1>
-
-  </h1>
-    </div> -->
+         <br><br><br><br><br>
+         <a
+             href="/clientInfo"
+        >
+            <button
+                mat-raised-button color="primary"
+                class="submit"
 
 
 
 
+            >
+                Submit
+            </button>
+         </a>
+  </body>
 
-
-
-      <br><br><br><br><br>
-      <a href="/clientInfo"><button mat-raised-button color="primary" class="submit">Submit</button></a>
-
-      <!-- </div> -->
-      </body>
-      <div class="footer">
-
+  <div
+      class="footer"
+  >
       <br><br>
       <footer>
-        <p>&copy; Lizzi Luebke 2022</p>
-        <address>
-          Email:
-          <a href="mailto:eluebke@costco.com"> Lizzi Luebke</a>
+          <p>
+              &copy; Lizzi Luebke 2022
+          </p>
+          <address>
+              Email:
+          <a
+              href="mailto:eluebke@costco.com"
+          >
+              Lizzi Luebke
+          </a>
         </address>
       </footer>
     </div>
-    </div>
+</div>

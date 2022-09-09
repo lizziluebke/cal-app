@@ -10,10 +10,10 @@ body {
   color: #cf0a2c;
 }
 
-mat-list-item {
+/* mat-list-item {
   margin: auto;
   display: flex;
-}
+} */
 
 #toolbar {
   color: black;
@@ -21,7 +21,7 @@ mat-list-item {
 }
 
 #home {
-  margin-left: 100em;
+  /* margin-left: 100em; */
   background-color: white;
 }
 
@@ -46,7 +46,16 @@ footer {
 }
 
 p {
-  padding: 2em;
+
 }
 
 
+.tireServices {
+  font-size: x-large;
+  color:  #e31836;
+  text-align: center;
+}
+
+mat-list-item {
+  text-align: center;
+}

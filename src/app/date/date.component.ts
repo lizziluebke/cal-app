@@ -23,7 +23,9 @@ export class DateComponent implements OnInit {
   selected: any;
   getAppointmentService: any;
   openings: string[] = [];
-  timeSlot: any;
+  timeSlot: string = "";
+  selectedService: string[] = ['Tire Installation', 'Tire Rotation', 'Battery Replacement'];
+  service: any;
 
 
 
@@ -95,12 +97,12 @@ export class DateComponent implements OnInit {
 }
 
 captureTimeValue(event: any) {
-  let timeSlot = event.srcElement.textContent;
-  console.log(timeSlot);
-  return timeSlot;
+  this.timeSlot = "Your appointment will be at " + event.srcElement.textContent  + " for " + this.service + " on ";
+  return this.timeSlot;
 
+}
 
-
+captureSelectedService(event: any) {
 
 }
 

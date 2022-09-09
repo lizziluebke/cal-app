@@ -62,7 +62,12 @@ p {
   padding: 2em;
 }
 
+#back {
+
+  margin-left: 20em;
+}
+
 .next {
-  text-align: center;
-  margin-left: 58em;
+  margin-right: 4em;
+  margin-left: 44em;
 }
