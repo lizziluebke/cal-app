@@ -15,7 +15,7 @@ export class ClientInfoComponent implements OnInit {
     membershipNumber = new FormControl('');
     phoneNumber = new FormControl('');
     comments = new FormControl('');
-
+    submitted: any;
 
     getErrorMessageEmail() {
       if (this.email.hasError('required')) {
@@ -57,17 +57,15 @@ export class ClientInfoComponent implements OnInit {
 
     }
 
-
-
   constructor(private fb: FormBuilder) {
-    this.myForm();
+
   }
 
 
-    myForm() {
-      this.clientForm = this.fb.group({
-        name: ['', Validators.required]
-      })
+    onSubmit() {
+        this.submitted = true;
+        alert('Success! Your appointment has been booked!');
+        console.log("form submitted");
     }
 
 

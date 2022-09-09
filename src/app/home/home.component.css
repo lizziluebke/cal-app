@@ -41,6 +41,7 @@ h1 {
 footer {
   background-color: #eee;
   height: 15vh;
+  padding-top: 2em;
   text-align: center;
   font-size: x-large;
 }
