@@ -1,6 +1,6 @@
 
 
-form {
+.form {
 
     margin-right: auto;
     margin-left: auto;
@@ -9,6 +9,10 @@ form {
 
 
 
+}
+
+h1 {
+  color: #e31836;
 }
 
 

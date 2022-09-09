@@ -1,62 +1,51 @@
-
-<form class="clientInfo" #clientInfo="ngForm">
-
-
-    <h1>Personal Information</h1>
-
-    <label for="firstName" name="firstName" lass="firstName">First Name</label><label id="asterisk"></label>
-    <br>
-    <mat-form-field appearance="fill" color="warn">
-    <mat-label>First Name</mat-label>
-    <input matInput required
-        type="firstName"
-        name="firstName"
-        >
-        <mat-error
-          *ngIf="firstName.invalid"
-        >
-          {{ getErrorMessage }}
-      </mat-error>
-  </mat-form-field>
-  <br>
-
-  <label for="lastName" class="lastName">Last Name</label><br>
-  <mat-form-field appearance="fill" color="warn">
-    <mat-label>Last Name</mat-label>
-    <input matInput required>
-  </mat-form-field>
-  <br>
-
-  <label for="memberNumber" class="memberNumber">Member Number</label><br>
-  <mat-form-field appearance="fill" color="warn">
-  <mat-label>Member Number </mat-label>
-  <input matInput>
-</mat-form-field>
-<br>
-
-  <label for="phoneNumber" class="phoneNumber">Phone Number</label><br>
-    <mat-form-field appearance="fill" color="fill">
-    <mat-label>Phone Number</mat-label>
-    <input matInput required>
-  </mat-form-field>
-  <br>
-
-  <label for="email" class="email">Email</label><br>
+<div class="form">
+  <h1>Client Information</h1>
+<div>
   <mat-form-field appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <br>
 
-  <label for="comments" class="comments">Comments</label><br>
+    <mat-label>First Name: </mat-label>
+    <input matInput placeholder="Bob" [formControl]="firstName" required>
+    <mat-error *ngIf="firstName.invalid">{{getErrorMessagename()}}</mat-error>
+  </mat-form-field>
+</div>
+<div>
   <mat-form-field appearance="fill">
-    <mat-label>Comments</mat-label>
-    <textarea matInput></textarea>
+    <mat-label>Last Name: </mat-label>
+    <input matInput placeholder="Jones" [formControl]="lastName" required>
+    <mat-error *ngIf="lastName.invalid">{{getErrorMessagelastName()}}</mat-error>
   </mat-form-field>
-  <br>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Membership Number: </mat-label>
+    <input matInput placeholder="123456789123" [formControl]="membershipNumber" required>
+    <mat-error *ngIf="membershipNumber.invalid">{{getErrorMessageMembershipNumber()}}</mat-error>
+  </mat-form-field>
+</div>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Phone Number: </mat-label>
+    <input matInput placeholder="555-123-4567" [formControl]="phoneNumber" required>
+    <mat-error *ngIf="phoneNumber.invalid">{{getErrorMessagephoneNumber()}}</mat-error>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Comments </mat-label>
+    <input matInput placeholder="" [formControl]="comments" >
+  </mat-form-field>
+</div>
+
+</div>
 
 
-  </form>
 
   <a href="/">
     <button mat-raised-button color="primary" class="next"
@@ -64,13 +53,13 @@
     >Back</button>
 
     <a
-        href="/confirmation"
+        href="/"
     >
         <button
             mat-raised-button color="primary" class="next"
             id="back"
         >
-            Next
+            Submit
         </button>
 
   </a>
