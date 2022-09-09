@@ -8,6 +8,7 @@ import { FormControl, FormGroup, NgForm, Validators, FormGroupDirective, FormBui
 })
 export class ClientInfoComponent implements OnInit {
     clientForm: any;
+    // this is a change
 
     email = new FormControl('', [Validators.required, Validators.email]);
     firstName = new FormControl('');
